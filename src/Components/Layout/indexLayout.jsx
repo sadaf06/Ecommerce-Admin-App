@@ -60,7 +60,7 @@ const Layout = (props) => {
               </div>
             </Col>
 
-            <Col md="10" style={{ marginLeft: "auto", marginTop: "60px" }}>
+            <Col md="9" style={{ marginLeft: "auto", marginTop: "60px" }}>
               {props.children}
             </Col>
           </Row>
