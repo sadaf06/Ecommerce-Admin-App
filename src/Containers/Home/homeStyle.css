@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sidebar {
+  margin-top: 5px;
+  margin-right: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  top: 55px;
+  left: 0;
+  width: 50px;
+  height: 320px;
+  background-color: cyan;
+  z-index: 10000;
+  border-radius: 5px;
+  transition: width 0.5s, height 0.5s, transform 0.5s;
+  transition-delay: 0s, 0.75s;
+  overflow: hidden;
+}
+
+.sidebar.navbar {
+  width: 270px;
+  transition: width 0.5s, height 0.5s, transform 0.5s;
+  transition-delay: 0s, 0.75s;
+  height: 100vh;
+}
+.sidebar ul {
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  display: block;
+}
+.sidebar ul li {
+  line-height: 67.6px;
+  list-style: none;
+  height: 67.6px;
+  overflow: hidden;
+}
+.sidebar ul li a {
+  color: black;
+  display: block;
+  font-size: 16px;
+  text-decoration: none;
+  width: 100%;
+  transition: 0.5s;
+  font-weight: 800;
+}
+.sidebar ul li a:hover {
+  background: black;
+  color: white;
+  letter-spacing: 3px;
+}
+.sidebar ul li a.active {
+  background: black;
+  color: white;
+  letter-spacing: 2px;
+  animation: select 800ms 1;
+}
+@keyframes select {
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+.sidebar ul li a i {
+  font-size: 1.5em;
+  margin: 0 20px 0 10px;
+}
+.sidebar .toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: black;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.sidebar .toggle.navbar {
+  background: rgb(12, 0, 0);
+  color: white;
+}
+.sidebar .toggle::before {
+  content: "+";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  width: 50px;
+  height: 50px;
+  transition: 0.5s;
+  color: white;
+}
+.sidebar .toggle.navbar::before {
+  transform: rotate(-315deg);
+  transform-origin: center center;
+}

@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #24282c;
+  color: white;
+}
+.sign {
+  position: fixed;
+  width: 200%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+.sign::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  width: 45px;
+  height: 45px;
+  border-top: 3px solid rgb(9, 196, 243);
+  border-right: 3px solid rgb(247, 199, 199);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.473);
+  border-radius: 50%;
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  50% {
+    border-color: rgb(8, 161, 250);
+  }
+  100% {
+    transform: rotate(360deg);
+    border-color: burlywood;
+  }
+}
